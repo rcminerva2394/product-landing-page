@@ -3,6 +3,7 @@
 This project is made under the freecodecamp "Responsive Web Design" module and this is just pure HTML and CSS. The theme was designed by me, but the contents are real.
 It is a real non-profit organization but for the section asking for email and submit is not real.
 I chose to make a product landing project for a non-profit because I'm interested to social and community developement related contents.
+After doing this project, I realized I still need to learn a lot about HTML and CSS. But surely, this somehow pushes me to do better.
 
 
 **These are the fulfilled requirements of this project:**
