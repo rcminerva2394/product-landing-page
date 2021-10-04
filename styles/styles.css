@@ -207,7 +207,7 @@ a.nav-link:focus {
 .feature-content {
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
 }
