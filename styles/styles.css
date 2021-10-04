@@ -304,6 +304,7 @@ figcaption:hover, figcaption:focus {
 }
 
 .video-wrapper iframe {
+    border: 0;
     position: absolute;
     width: 100%;
     height: 100%;
