@@ -1,0 +1,199 @@
+/** BELOW  1200px
+**/
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .hero {
+        width: 70%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/** BELOW  940px
+**/
+@media (max-width: 59em) {
+    html {
+        font-size: 52%;
+    }
+
+    /* Mobile navigation for header */
+    .hero {
+        padding: 2rem 4rem;
+    }
+    .logo {
+        height: 8rem;
+    }
+
+    .btn-mobile-nav {
+        display: block;
+        z-index: 1000;
+        align-self: center;
+        justify-self: end;
+    }
+
+    .navbar {
+        background-color: rgba(255, 255, 255, 0.97);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    /* Will be added to the DOM for mobile-navigation animation*/
+    .nav-open .navbar {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+        text-align: center;
+    }
+
+    .nav-open .fa-solid.fa-xmark.icon-mobile-nav {
+        display: block;
+        color: #555;
+    }
+
+    .nav-open .fa-solid.fa-bars.icon-mobile-nav {
+        display: none;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        gap: 6rem;
+        color: #555;
+    }
+
+    .navbar-link:link,
+    .navbar-link:visited {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .join-revolution {
+        padding: 5rem 2rem;
+    }
+
+    .section-features {
+        gap: 2.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+        padding: 3rem;
+    }
+
+    .gallery-item img {
+        height: 20rem;
+    }
+}
+
+/** BELOW  700px 
+**/
+
+@media (max-width: 44em) {
+    .hero {
+        width: 90%;
+    }
+
+    .main-heading {
+        font-size: 4.75rem;
+    }
+
+    .testimonials-container {
+        padding: 5rem 2rem;
+    }
+    .section-cta {
+        margin: 0 auto;
+    }
+
+    .cta-container {
+        grid-template-rows: 1fr 1fr;
+        width: 90%;
+    }
+
+    .cta-text-box {
+        grid-column: 1 / -1;
+    }
+
+    .cta-img-box {
+        grid-row: 2 / -1;
+        grid-column: 1 / -1;
+        border-top-right-radius: 0rem;
+        background-size: cover;
+    }
+}
+
+/** BELOW  544px
+**/
+
+@media (max-width: 34em) {
+    .hero {
+        width: 95%;
+        padding: 1rem 2rem;
+    }
+
+    .main-heading {
+        font-size: 3.75rem;
+    }
+
+    .join-revolution,
+    .section-testimonials {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+    .section-features {
+        grid-template-columns: auto;
+        gap: 7rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+}
+
+/** BELOW  400px (Smaller tablets)
+**/
+@media (max-width: 25em) {
+    .hero {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .logos {
+        gap: 0.5rem;
+    }
+
+    .cta-container {
+        width: 95%;
+    }
+}

@@ -10,7 +10,9 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <script defer src="/js/script.js"></script>
         <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="stylesheet" href="styles/queries.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -19,7 +21,7 @@
     </head>
     <body>
         <header class="header grid">
-            <nav class="navbar">
+            <div class="header-top">
                 <a href="https://ccapfairtrade.com/" target="_blank">
                     <img
                         class="logo"
@@ -27,31 +29,33 @@
                         alt="Community Crafts Association of the Philippines(CCAP) logo"
                     />
                 </a>
-                <ul class="navbar-list">
-                    <li>
-                        <a class="navbar-link" href="#">Features</a>
-                    </li>
-                    <li>
-                        <a class="navbar-link" href="#">Collections</a>
-                    </li>
-                    <li>
-                        <a class="navbar-link" href="#">Join the Revolution!</a>
-                    </li>
-                    <li><a class="navbar-link" href="#">Contact</a></li>
-                </ul>
-
+                <nav class="navbar">
+                    <ul class="navbar-list">
+                        <li>
+                            <a class="navbar-link" href="#"
+                                >Join the revolution</a
+                            >
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="#">Features</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="#">Testimonials</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link btn-cta" href="#">Sign up</a>
+                        </li>
+                    </ul>
+                </nav>
                 <!--Mobile Toggle-->
-                <!-- <button class="btn-mobile-nav">
-                <ion-icon
-                    class="icon-mobile-nav"
-                    name="menu"
-                ></ion-icon>
-                <ion-icon
-                    class="icon-mobile-nav"
-                    name="close"
-                ></ion-icon>
-                </button> -->
-            </nav>
+                <button class="btn-mobile-nav">
+                    <i class="fa-solid fa-bars icon-mobile-nav" name="menu"></i>
+                    <i
+                        class="fa-solid fa-xmark icon-mobile-nav"
+                        name="close"
+                    ></i>
+                </button>
+            </div>
 
             <!--HERO SECTION-->
             <div class="hero">
@@ -69,6 +73,62 @@
         </header>
 
         <main>
+            <section class="join-revolution">
+                <span class="subheading">All about fair trade</span>
+                <h2 class="heading-secondary">Join the business revolution</h2>
+
+                <p class="video-description">
+                    CCAP is composed of a non-government organization(NGO) and a
+                    marketing company that empower thirty-one (31)
+                    community-based marginal producer groups located in eleven
+                    (11) provinces of the Philippines. The said groups employ a
+                    total of around nine-hundred (900) artisans. We are a
+                    guaranteed member of the World Fair Trade Organization
+                    (WFTO) and dedicated to promote Fair Trade.
+                </p>
+                <div class="video-box">
+                    <iframe
+                        class="video"
+                        width="560"
+                        height="350"
+                        src="https://www.youtube.com/embed/FpuRfIzGw7o"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+            <section class="section-features grid grid-3-cols">
+                <div class="feature">
+                    <i class="fa-regular fa-heart feature-icon"></i>
+                    <p class="feature-title">Empowering poor artisans</p>
+                    <p class="feature-text">
+                        All of the products are made by the marginalized and
+                        small producers from the Philippines.
+                    </p>
+                </div>
+                <div class="feature">
+                    <i
+                        class="fa-sharp fa-solid fa-scale-balanced feature-icon"
+                    ></i>
+                    <p class="feature-title">Fair payment</p>
+                    <p class="feature-text">
+                        The artisans and producers receive fair pay that is
+                        mutually negotiated and agreed by all
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-earth-asia feature-icon"></i>
+                    <p class="feature-title">Respect for environment</p>
+                    <p class="feature-text">
+                        We maximize the use of raw materials and with the least
+                        overall impact on the environment
+                    </p>
+                </div>
+            </section>
+
             <section class="section-testimonials grid">
                 <div class="testimonials-container">
                     <span class="subheading">Testimonials</span>
@@ -198,62 +258,6 @@
                     </figure>
                 </div>
             </section>
-            <section class="join-revolution">
-                <span class="subheading">All about fair trade</span>
-                <h2 class="heading-secondary">Join the business revolution</h2>
-
-                <p class="video-description">
-                    CCAP is composed of a non-government organization(NGO) and a
-                    marketing company that empower thirty-one (31)
-                    community-based marginal producer groups located in eleven
-                    (11) provinces of the Philippines. The said groups employ a
-                    total of around nine-hundred (900) artisans. We are a
-                    guaranteed member of the World Fair Trade Organization
-                    (WFTO) and dedicated to promote Fair Trade.
-                </p>
-                <div class="video-box">
-                    <iframe
-                        class="video"
-                        width="560"
-                        height="350"
-                        src="https://www.youtube.com/embed/FpuRfIzGw7o"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                </div>
-            </section>
-
-            <section class="section-features grid grid-3-cols">
-                <div class="feature">
-                    <i class="fa-regular fa-heart feature-icon"></i>
-                    <p class="feature-title">Empowering poor artisans</p>
-                    <p class="feature-text">
-                        All of the products are made by the marginalized and
-                        small producers from the Philippines.
-                    </p>
-                </div>
-                <div class="feature">
-                    <i
-                        class="fa-sharp fa-solid fa-scale-balanced feature-icon"
-                    ></i>
-                    <p class="feature-title">Fair payment</p>
-                    <p class="feature-text">
-                        The artisans and producers receive fair pay that is
-                        mutually negotiated and agreed by all
-                    </p>
-                </div>
-
-                <div class="feature">
-                    <i class="fa-solid fa-earth-asia feature-icon"></i>
-                    <p class="feature-title">Respect for environment</p>
-                    <p class="feature-text">
-                        We maximize the use of raw materials and with the least
-                        overall impact on the environment
-                    </p>
-                </div>
-            </section>
 
             <section class="section-membership">
                 <h2 class="heading-membership">Proud and guaranteed members</h2>
@@ -308,6 +312,7 @@
                             </button>
                         </form>
                     </div>
+
                     <div
                         class="cta-img-box"
                         role="img"

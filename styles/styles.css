@@ -2,13 +2,13 @@
 Guide, style by order (starting from the smallest)
 Element (font-size, margin, color, line-height, font-weight)
 Component (background, border, padding, box-shadow, grid layout or flex)
- 
+
 ----01 TYPOGRAPHY SYSTEM
- 
+
 - font-sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 → small screen: headline: 24px, content: 14px
- 
+
 defaults:
 h1 32px (2em)
 h2 24px (1.5em)
@@ -17,39 +17,40 @@ h4 16px (1em)
 h5 12.8px (0.8em)
 h6 11.2px (0.7em)
 p 16px (1em)
- 
+
 default: 1.6rem
 
 - line height
 default: 1.5
 1.2
 1.8
- 
+
 - font-weight: 400;
- 
+
 - letter spacing
 0.5px
 0.75px
 
 ----02 COLORS
 Refer to colors for contrast check, and for tints and shades, refer to open color
- 
+
 - main-color:  #054c37
 - tints: #e6edeb #f9fbf5;
 - shades: #66a80f;
-- grey-color: #555, 
+- grey-color: #555,
 #222222
 - accent-color:#ffd43b;
- 
+
 ----03 SHADOWS
- 
+
 ----04 BORDER-RADIUS
- 
+
 ----05 WHITESPACE
- 
+
 - spacing (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
- 
+
+
 */
 
 :root {
@@ -130,44 +131,87 @@ body {
     background-position: center;
     height: 100vh;
     padding: 2rem 4rem;
-    grid-template-rows: 0.25fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .logo {
     height: 7rem;
+    align-self: center;
 }
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+/* Navigation */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    align-self: start;
+    align-self: center;
 }
 
 .navbar-list {
     list-style: none;
     display: flex;
     gap: 5rem;
+    align-items: center;
 }
 
 .navbar-link:link,
-.navbar-link:hover {
+.navbar-link:visited {
     text-decoration: none;
     display: inline-block;
     color: inherit;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.75rem;
     letter-spacing: 0.75px;
 }
 
-.navbar-link:hover,
-.navbar-link:visited {
+.navbar-link.btn-cta:link {
+    color: #000;
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
 }
+
+.navbar-link.btn-cta:hover {
+    background-color: #b39429;
+    color: #000;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+    color: var(--accent-color);
+}
+
+/* Mobile Navigation*/
+.btn-mobile-nav {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.icon-mobile-nav {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.fa-solid.fa-xmark.icon-mobile-nav[name='close'] {
+    display: none;
+}
+
+/* Hero */
 
 .hero {
     width: 60%;
     padding: 6rem 12rem;
-    align-self: start;
+    align-self: center;
+    grid-column: 1 / -1;
 }
+
 .main-heading {
     font-size: 5.2rem;
     line-height: 1.2;
@@ -191,12 +235,60 @@ body {
     outline-offset: -0.2rem;
     transition: all 0.2s ease;
     font-weight: 500;
+    border-radius: 2rem;
 }
 
 .btn-main:hover,
 .btn-main:active {
     outline: var(--outline);
     outline-offset: -0.8rem;
+}
+
+/****************/
+/* JOIN THE REVOLUTION*/
+.join-revolution {
+    color: #333;
+    padding: 7rem 15rem;
+    font-size: 1.8rem;
+}
+
+.video-description {
+    margin: 4rem 0;
+    line-height: 1.8;
+}
+
+.video-box {
+    display: flex;
+    justify-content: center;
+}
+
+/****************/
+/* FEATURES */
+.section-features {
+    color: #555;
+    gap: 5rem;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin: 7rem 14rem;
+}
+
+.feature-icon {
+    color: #52860c;
+    font-size: 3rem;
+    border-radius: 50%;
+    background-color: #e0eecf;
+    padding: 1.5rem;
+}
+
+.feature-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #292929;
+    margin-top: 3rem;
+}
+
+.feature-text {
+    margin-top: 1.5rem;
 }
 
 /****************/
@@ -235,8 +327,8 @@ body {
 
 .gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 1rem;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .gallery-item {
@@ -255,57 +347,40 @@ body {
 }
 
 /****************/
-/* JOIN THE REVOLUTION*/
-.join-revolution {
+/* MEMBERSHIP*/
+
+.section-membership {
     color: #333;
-    padding: 7rem 15rem;
-    font-size: 1.8rem;
+    padding-top: 7rem;
 }
 
-.video-description {
-    margin: 3rem 0;
-    line-height: 1.8;
-}
-
-.video-box {
-    width: 56rem;
-    margin: 0 auto;
-}
-
-/****************/
-/* FEATURES */
-.section-features {
-    color: #555;
-    gap: 5rem;
-    margin: 7rem auto;
+.heading-membership {
+    color: #a0a0a0;
+    text-transform: uppercase;
     font-size: 1.75rem;
-    width: 100rem;
+    font-weight: 500;
+    text-align: center;
 }
 
-.feature-icon {
-    color: #52860c;
-    font-size: 3rem;
-    border-radius: 50%;
-    background-color: #e0eecf;
-    padding: 1.5rem;
-}
-
-.feature-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #292929;
+.logos {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
     margin-top: 3rem;
 }
 
-.feature-text {
-    margin-top: 1.5rem;
+.logos img {
+    height: 10rem;
+    filter: gray;
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+    opacity: 60%;
 }
 
 /****************/
 /* CTA */
 .section-cta {
     color: #1f3204;
-    background-color: #f9fbf5;
     padding-top: 7rem;
     padding-bottom: 10rem;
 }
@@ -343,6 +418,7 @@ body {
     height: 100%;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    display: inline-block;
 }
 
 .cta-form input,
@@ -370,42 +446,10 @@ body {
 }
 
 /****************/
-/* MEMBERSHIP*/
-
-.section-membership {
-    color: #333;
-    padding-top: 7rem;
-    background-color: #f9fbf5;
-}
-
-.heading-membership {
-    color: #a0a0a0;
-    text-transform: uppercase;
-    font-size: 1.75rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-.logos {
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
-    margin-top: 3rem;
-}
-
-.logos img {
-    height: 10rem;
-    filter: gray;
-    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
-    opacity: 60%;
-}
-
-/****************/
 /* FOOTER */
 .footer {
-    color: #777;
-    margin-top: 7rem;
+    color: #bbb;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     font-size: 1.5rem;
     text-align: center;
@@ -413,6 +457,6 @@ body {
 
 .footer-link {
     text-decoration: none;
-    color: #555;
+    color: #999;
     font-weight: 600;
 }
