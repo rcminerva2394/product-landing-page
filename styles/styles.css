@@ -127,7 +127,7 @@ body {
                 rgba(3, 34, 25, 0.8),
             rgba(3, 34, 25, 0.8)
         ),
-        url('/img/hero.jpg');
+        url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -412,7 +412,7 @@ body {
             rgba(102, 168, 15, 0.388),
             rgba(102, 168, 15, 0.388)
         ),
-        url('/img/smiling-planter.jpg');
+        url('../img/smiling-planter.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
